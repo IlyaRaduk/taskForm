@@ -1,0 +1,373 @@
+@import './fonts.scss';
+@import './reset.scss';
+@import './alert.scss';
+
+@mixin text-over() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin tooltip($text) {
+    content:$text;
+    display: block;
+    color: red;
+    position: absolute;
+    bottom: -15px;
+    opacity: 0;
+    transition: 0.34s linear;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.title-wrapper {
+    position: relative;
+    background-color: #5A61ED;
+    width: 137px;
+}
+
+.title {
+    position: absolute;
+    transform: rotate(-90deg) translate(205px, -114px);
+    overflow: hidden;
+    bottom: 0px;
+    width: 430px;
+    font-family: 'PT Sans';
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    @include text-over();
+}
+
+.content {
+    font-family: 'Work Sans';
+    color: #111111;
+    position: relative;
+    max-width: 528px;
+    padding: 39px 22px 33px 21px;
+}
+
+.content-img {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+.form {
+    position: relative;
+    z-index: 2;
+}
+
+.form__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.46px;
+    @include text-over();
+}
+
+.description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+    @include text-over();
+    white-space: normal;
+}
+
+.form__data {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 77px;
+}
+
+.form__field {
+    position: relative;
+    opacity: 0;
+    width: 49%;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #F2F2F2;
+    margin-bottom: 16px;
+    transition: opacity 1s linear;
+
+    input {
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+
+    input[type=radio] {
+        width: auto;
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+}
+
+.borderInWrongField {
+    border-bottom: 2px solid red;
+}
+
+.textInWrongField {
+    input {
+        color: red;
+    }
+}
+
+.readyField {
+    opacity: 1;
+}
+
+.form__label {
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+    margin-bottom: 1px;
+    @include text-over();
+}
+
+.form__item {
+    font-family: 'Work Sans';
+    height: 21px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111
+}
+
+.form__select-conteiner {
+    display: flex;
+    justify-content: space-between;
+
+    & .select:nth-child(1) {
+        flex: 1 1 56px;
+    }
+
+    & .select:nth-child(2) {
+        flex: 1 1 91px;
+        left: -2px;
+    }
+
+    & .select:nth-child(3) {
+        flex: 1 1 68px;
+        left: 2px;
+    }
+}
+
+.select {
+    position: relative;
+    left: -4px;
+}
+
+.form__radio-conteiner {
+    display: flex;
+    align-items: center;
+    height: 21px;
+
+    & .radio:nth-child(3) {
+        margin-left: 2px;
+    }
+}
+
+.radio {
+    height: 12px;
+    width: 12px;
+}
+
+.radio__label {
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    @include text-over();
+
+    &:first-of-type {
+        margin-right: 19px;
+    }
+}
+
+.first-name {
+    position: relative;
+    input {
+        padding-top: 3px;
+    }
+
+    &::after {
+        @include tooltip('Укажите имя');
+    }
+}
+
+.last-name {
+    position: relative;
+    input {
+        padding-top: 3px;
+        padding-left: 2px;
+    }
+
+    &::after {
+        @include tooltip('Укажите фамилию');
+    }
+}
+
+.nationality {
+    .select {
+        width: 103%;
+    }
+}
+
+.e-mail {
+    input {
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
+    &__mark {
+        display: none;
+        position: absolute;
+        right: 1px;
+        bottom: 12px;
+    }
+
+    &::after {
+        @include tooltip('Введено некорректное имя почты');
+    }
+}
+
+.activeMark {
+    display: block;
+}
+
+.password {
+    &::after {
+        @include tooltip('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры');
+        bottom: -43px;
+    }
+}
+
+.password2 {
+    &::after {
+        @include tooltip('Пароли не совпадают');
+    }
+}
+.tooltipInWrongField {
+    &::after {
+        opacity: 1;
+    }
+}
+
+.form__login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__acc {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+
+    & p {
+        line-height: 15px;
+        font-weight: 300;
+        margin-right: 4px;
+    }
+
+    & a {
+        color: rgba(90, 97, 237, 1);
+        line-height: 15px;
+        font-weight: 500;
+    }
+}
+
+.form__submit {
+    position: relative;
+    top: 2px;
+    font-family: 'PT Sans';
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    width: 155px;
+    padding: 7px 25px;
+    background: #5A61ED;
+    border: 1px solid #FFFFFF;
+    @include text-over();
+}
+
+.activeSubmit {
+    animation: submit 0.5s ease-in;
+}
+
+@keyframes submit {
+
+    0%,
+    40%,
+    80% {
+        transform: translateX(10px)
+    }
+
+    20%,
+    60% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+@media(max-width:660px) {
+
+    .wrapper {
+        display: block;
+    }
+    .title-wrapper {
+        z-index: 5; 
+        height: 137px;
+        width: 100%;
+        padding-top: 45px;
+    }
+
+    .title {
+        width: 100%;
+        position: static;
+        padding: 0px 0px 10px 21px;
+        transform: none;
+    }
+    .content {
+        max-width: 100%;
+    }
+
+    .form__field {
+        width: 100%;
+        &::after{
+            position: static;
+            height: 0px;
+            border-top: 2px solid red;;
+        }
+    }
+    .borderInWrongField {
+        border-bottom: 0px solid red;
+    }
+    .tooltipInWrongField {
+        &::after {
+            opacity: 1;
+            height: auto;
+        }
+    }
+
+    .nationality {
+        .select {
+            width: 101%;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.alert {
+    position: absolute;
+    z-index: 4;
+    transform: translateY(-200vh);
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color: #FFFFFF;
+    padding-left: 43px;
+    padding-top: 178px;
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 11px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+@keyframes alert {
+    20% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-60px);
+    }
+
+    40% {
+        transform: translateY(0px);
+    }
+
+    90% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-200vh);
+    }
+}
+
+.alertOkActive {
+    animation: alert 2s linear;
+}
+
+.alertErrorActive {
+    animation: alert 2s linear;
+}
