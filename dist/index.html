@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Радюк И.С.</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script defer src="./js/script.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="title-wrapper">
+                <h1 class="title">Sign up</h1>
+            </div>
+            <div class="content">
+                <div class="alert alertOk">
+                    <p class="alert__title">
+                        Thank You
+                    </p>
+                    <p class="alert__text">
+                        you registered!
+                    </p>
+                </div>
+                <div class="alert alertError">
+                    <p class="alert__title">
+                        Sorry
+                    </p>
+                    <p class="alert__text">
+                        try later...
+                    </p>
+                </div>
+                <form class="form">
+                    <h2 class="form__title">
+                        New user?
+                    </h2>
+
+                    <p class="description">
+                        Use the form below to create your account.
+                    </p>
+                    <div class="form__data">
+                        <div class="form__field first-name">
+                            <label class="form__label" for="first-name">First Name</label>
+                            <input class="form__item" type="text" id="first-name" name="first-name" value="Alice">
+                        </div>
+                        <div class="form__field last-name">
+                            <label class="form__label" for="last-name">Last Name</label>
+                            <input class="form__item" type="text" id="last-name" name="last-name" value="Miller">
+                        </div>
+                        <div class="form__field nationality">
+                            <label class="form__label" for="nationality">Nationality</label>
+                            <select class="form__item select" id="nationality" name="nationality">
+                                <option class="select__item" value="American">American</option>
+                                <option class="select__item" value="Belarusian">Belarusian</option>
+                                <option class="select__item" value="Russian">Russian</option>
+                            </select>
+                        </div>
+                        <div class="form__field e-mail">
+                            <label class="form__label" for="e-mail">E-mail</label>
+                            <input class="form__item" type="email" id="e-mail" name="e-mail"
+                                value="alice.miller@yahoo.com">
+                            <object class="e-mail__mark activeMark" type="image/svg+xml" data="./img/mark.svg">
+                            </object>
+                        </div>
+                        <div class="form__field date">
+                            <label class="form__label" for="day">Date of Birth</label>
+                            <div class="form__select-conteiner">
+                                <select class="form__item select" id="day" name="day">
+                                    <option class="select__item" value="1">1</option>
+                                    <option class="select__item" value="2">2</option>
+                                    <option class="select__item" value="3">3</option>
+                                    <option class="select__item" value="4">4</option>
+                                    <option class="select__item" value="5">5</option>
+                                    <option class="select__item" value="6">6</option>
+                                    <option class="select__item" value="7">7</option>
+                                    <option class="select__item" value="8">8</option>
+                                    <option class="select__item" value="9">9</option>
+                                    <option class="select__item" value="10">10</option>
+                                    <option class="select__item" value="11">11</option>
+                                    <option class="select__item" value="12">12</option>
+                                    <option class="select__item" value="13">13</option>
+                                    <option class="select__item" value="14">14</option>
+                                    <option class="select__item" value="15">15</option>
+                                    <option class="select__item" value="16">16</option>
+                                    <option class="select__item" value="17">17</option>
+                                    <option class="select__item" value="18">18</option>
+                                    <option class="select__item" value="19">19</option>
+                                    <option class="select__item" value="20">20</option>
+                                    <option class="select__item" value="21" selected>21</option>
+                                    <option class="select__item" value="22">22</option>
+                                    <option class="select__item" value="23">23</option>
+                                    <option class="select__item" value="24">24</option>
+                                    <option class="select__item" value="25">25</option>
+                                    <option class="select__item" value="26">26</option>
+                                    <option class="select__item" value="27">27</option>
+                                    <option class="select__item" value="29">29</option>
+                                    <option class="select__item" value="30">30</option>
+                                    <option class="select__item" value="31">31</option>
+                                </select>
+                                <select class="form__item select" id="month" name="month">
+                                    <option class="select__item" value="January">January </option>
+                                    <option class="select__item" value="February">February</option>
+                                    <option class="select__item" value="March">March</option>
+                                    <option class="select__item" value="April">April</option>
+                                    <option class="select__item" value="May">May</option>
+                                    <option class="select__item" value="June">June</option>
+                                    <option class="select__item" value="July">July</option>
+                                    <option class="select__item" value="August">August</option>
+                                    <option class="select__item" value="September">September</option>
+                                    <option class="select__item" value="October">October</option>
+                                    <option class="select__item" value="November">November</option>
+                                    <option class="select__item" value="December" selected>December</option>
+                                </select>
+                                <select class="form__item select" id="year" name="year">
+                                    <option class="select__item" value="1995">1995</option>
+                                    <option class="select__item" value="1996">1996</option>
+                                    <option class="select__item" value="1997">1997</option>
+                                    <option class="select__item" value="1998">1998</option>
+                                    <option class="select__item" value="1999">1999</option>
+                                    <option class="select__item" value="2001">2001</option>
+                                    <option class="select__item" value="2002">2002</option>
+                                    <option class="select__item" value="2003">2003</option>
+                                    <option class="select__item" value="2004">2004</option>
+                                    <option class="select__item" value="2005">2005</option>
+                                    <option class="select__item" value="2006">2006</option>
+                                    <option class="select__item" value="2007">2007</option>
+                                    <option class="select__item" value="2008">2008</option>
+                                    <option class="select__item" value="2009">2009</option>
+                                    <option class="select__item" value="2010">2010</option>
+                                    <option class="select__item" value="2011">2011</option>
+                                    <option class="select__item" value="2012">2012</option>
+                                    <option class="select__item" value="2013">2013</option>
+                                    <option class="select__item" value="2014">2014</option>
+                                    <option class="select__item" value="2015">2015</option>
+                                    <option class="select__item" value="2016">2016</option>
+                                    <option class="select__item" value="2017">2017</option>
+                                    <option class="select__item" value="2018">2018</option>
+                                    <option class="select__item" value="2019">2019</option>
+                                    <option class="select__item" value="2020">2020</option>
+                                    <option class="select__item" value="2021">2021</option>
+                                    <option class="select__item" value="2022">2022</option>
+                                    <option class="select__item" value="2023">2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__field gender">
+                            <label class="form__label" for="male">Gender</label>
+                            <div class="form__radio-conteiner">
+                                <input checked class="form__radio radio" type="radio" name="gender" id="male">
+                                <label for="male" class="radio__label">Male</label>
+                                <input class="form__radio radio" type="radio" name="gender" id="female">
+                                <label for="female" class="radio__label">Female</label>
+                            </div>
+                        </div>
+                        <div class="form__field password">
+                            <label class="form__label" for="password">Password</label>
+                            <input class="form__item" type="password" name="password" id="password">
+                        </div>
+                        <div class="form__field password2">
+                            <label class="form__label" for="password2">Confirm Password</label>
+                            <input class="form__item" type="password" name="password2" id="password2">
+                        </div>
+                    </div>
+                    <div class="form__login">
+                        <div class="form__acc">
+                            <p>
+                                Have an account?
+                            </p>
+                            <a href="#">Login</a>
+                        </div>
+                        <button class="form__submit">Complete Signup</button>
+                    </div>
+                </form>
+                <object class="content-img" id="my-svg" type="image/svg+xml" data="./img/bg.svg">
+                </object>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
